@@ -20,3 +20,24 @@ lab-key.pub
 # Environment Variables
 .env
 .env.local
+
+# Azure lab local keys and dataset
+azure/lab-key*
+azure/data/
+azure/.secrets/
+__pycache__/
+*.zip
+
+# Azure lab generated evidence and runtime artifacts (kept locally)
+azure/*.log
+azure/*.png
+azure/*.jpg
+azure/known_hosts
+azure/lightgbm_model.txt
+azure/deployment.json
+azure/disk-details.json
+azure/resources-before-cleanup.json
+azure/cleanup-exists.txt
+azure/cleanup-status.json
+azure/cost-management.json
+azure/prices-*.json

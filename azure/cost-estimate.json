@@ -1,0 +1,23 @@
+{
+  "currency": "USD",
+  "region": "southeastasia",
+  "vm_sku": "Standard_B2s_v2",
+  "vm_linux_usd_per_hour": 0.106,
+  "public_ip_usd_per_hour": 0.005,
+  "disk_sku": "Standard_LRS S4",
+  "disk_usd_per_month": 1.536,
+  "disk_month_hours_assumption": 730,
+  "fixed_equivalent_usd_per_hour": 0.1131041095890411,
+  "estimated_15_minutes_usd": 0.028276027397260275,
+  "is_recorded_bill": false,
+  "excludes": [
+    "disk transactions",
+    "bandwidth over free allowance",
+    "tax"
+  ],
+  "source_files": [
+    "prices-vm.json",
+    "prices-disk.json",
+    "prices-ip.json"
+  ]
+}

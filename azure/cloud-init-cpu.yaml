@@ -1,0 +1,11 @@
+#cloud-config
+package_update: true
+packages:
+  - python3
+  - python3-venv
+  - python3-pip
+  - libgomp1
+runcmd:
+  - [python3, -m, venv, /opt/ml-env]
+  - [/opt/ml-env/bin/pip, install, --upgrade, pip]
+  - [/opt/ml-env/bin/pip, install, lightgbm, scikit-learn, pandas, numpy, kaggle]
