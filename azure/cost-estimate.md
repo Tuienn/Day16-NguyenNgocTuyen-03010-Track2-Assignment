@@ -32,9 +32,9 @@ Nếu deallocate VM thì compute dừng tính tiền, nhưng disk và IP còn t�
 
 ## Bằng chứng và giới hạn
 
-- `cost-management.json`: phản hồi thật của Azure Cost Management API cho resource group `ai-lab-rg`, có `rows: []` tại thời điểm thu. Không chứng minh chi phí bằng 0.
-- `cost-management-screenshot.jpg`: ảnh thật của giao diện chọn phạm vi Cost Management; không phải ảnh hóa đơn có số tiền. UI không cho chọn subscription ở thời điểm thu.
+- `cost-management.json`: phản hồi thật của Azure Cost Management API cho resource group `ai-lab-rg`, thu lại ngày 05/10/2026. Chi phí ngày 04/10: Virtual Machines **0.019433616 USD**, Virtual Network **0.00582222222222222 USD**, Storage **0.000402432 USD**, Bandwidth **0 USD**. Tổng **0.02565827022222222 USD**, làm tròn thành **US$0.03**.
+- `cost-management-screenshot.png`: ảnh Billing Portal người dùng cung cấp ngày 05/10/2026, hiển thị Current charges và Pre-tax total tháng 10 là **US$0.03**; VM **US$0.02**, IP **US$0.01**, disk **US$0.00** sau làm tròn. Amount due **US$0.00** là số tiền đến hạn, không phải tổng chi phí phát sinh. Ảnh không hiển thị bộ lọc resource group; phạm vi `ai-lab-rg` được xác nhận riêng qua phản hồi API.
 - `prices-vm.json`, `prices-disk.json`, `prices-ip.json`: phản hồi nguyên gốc từ Retail Prices API làm căn cứ dự toán.
-- `cost-query.json`: nội dung truy vấn chi phí tháng hiện tại, phạm vi chỉ resource group lab.
+- `cost-query.json`: nội dung truy vấn `ActualCost`, khoảng thời gian cố định 01–05/10/2026 (UTC), theo ngày và dịch vụ. Phạm vi resource group lab nằm trong URL API ở `cost-management.json`, không nằm trong request body.
 
 Dữ liệu chi phí cập nhật có độ trễ. Trang Cost Management data của Microsoft nêu độ trễ tùy loại tài khoản; không suy diễn rằng chưa có bản ghi đồng nghĩa không phát sinh phí.

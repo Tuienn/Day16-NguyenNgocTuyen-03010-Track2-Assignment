@@ -1,0 +1,55 @@
+{
+  "eTag": null,
+  "id": "subscriptions/379e95a4-fc8c-4363-995d-26f70d2ca509/resourcegroups/ai-lab-rg/providers/Microsoft.CostManagement/query/feb49b91-b03c-4ff8-a88d-c86416c5950d",
+  "location": null,
+  "name": "feb49b91-b03c-4ff8-a88d-c86416c5950d",
+  "properties": {
+    "columns": [
+      {
+        "name": "Cost",
+        "type": "Number"
+      },
+      {
+        "name": "UsageDate",
+        "type": "Number"
+      },
+      {
+        "name": "ServiceName",
+        "type": "String"
+      },
+      {
+        "name": "Currency",
+        "type": "String"
+      }
+    ],
+    "nextLink": null,
+    "rows": [
+      [
+        0.0,
+        20261004,
+        "Bandwidth",
+        "USD"
+      ],
+      [
+        0.000402432,
+        20261004,
+        "Storage",
+        "USD"
+      ],
+      [
+        0.019433616,
+        20261004,
+        "Virtual Machines",
+        "USD"
+      ],
+      [
+        0.00582222222222222,
+        20261004,
+        "Virtual Network",
+        "USD"
+      ]
+    ]
+  },
+  "sku": null,
+  "type": "Microsoft.CostManagement/query"
+}

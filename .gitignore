@@ -32,6 +32,7 @@ __pycache__/
 azure/*.log
 azure/*.png
 azure/*.jpg
+!azure/cost-management-screenshot.png
 azure/known_hosts
 azure/lightgbm_model.txt
 azure/deployment.json
@@ -39,5 +40,4 @@ azure/disk-details.json
 azure/resources-before-cleanup.json
 azure/cleanup-exists.txt
 azure/cleanup-status.json
-azure/cost-management.json
 azure/prices-*.json
